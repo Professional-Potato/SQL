@@ -27,26 +27,26 @@ VALUES
     (14, 'Cutlery Set', 'Kitchen Supplies', 34.50, 40, 4.4),
     (15, 'Cozy Throw Blanket', 'Furnishings', 24.99, 100, 4.2);
 
-#For this project, I used SQL to query the Superstore database to get information about items sold at the sore and their prices. 
+#For this project, I used SQL to query the Superstore database to get information about items sold at the store and their prices. 
 
--- Use a SELECT statement to order the items by price. 
+# Use a SELECT statement to order the items by price. 
 
 SELECT item_name, price
 FROM superstore
 ORDER BY price;
 
--- Get the average price of all items
+# Get the average price of all items
 
 SELECT AVG(price)
 FROM superstore;
 
--- Get the sum of items in the category Kitchen Supplies
+# Get the sum of items in the category 'Kitchen Supplies'
 
 SELECT category, SUM(price)
 FROM superstore
 WHERE CATEGORY = 'Kitchen Supplies';
 
--- How many items are in stock in Furnishings ORDER BY DESC
+# How many items are in stock in 'Furnishings', ORDER BY 'stock_quantity' DESC
 
 SELECT item_name, category, stock_quantity
 FROM superstore
